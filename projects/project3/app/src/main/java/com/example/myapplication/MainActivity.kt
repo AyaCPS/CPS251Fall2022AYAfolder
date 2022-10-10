@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -18,10 +19,9 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.button.setOnClickListener {
-            if(binding.billTotal.text.isBlank()){
+            if (binding.billTotal.text.isBlank()) {
                 binding.resultText.text = "YOU MUST ENTER A BILL AMOUNT"
-            }
-            else {
+            } else {
                 val bill = binding.billTotal.text.toString().toFloat()
                 var output = "The Tips are as follows:"
                 output += "\n10% = " + String.format("%.2f", bill * 1.1)
@@ -29,7 +29,6 @@ class MainActivity : AppCompatActivity() {
                 output += "\n20% = " + String.format("%.2f", bill * 1.2)
                 binding.resultText.text = output
             }
-        }
-    }
+        }    }
 }
 
