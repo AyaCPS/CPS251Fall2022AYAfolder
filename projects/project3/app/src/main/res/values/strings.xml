@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="textview1">TextView</string>
+    <string name="button">Button</string>
+    <string name="number_box">number_box</string>
+    <string name="resulttext">resultText</string>
+    <string name="resulttext2">resultText</string>
+    <string name="string_resulttext">\@string/resulttext</string>
+    <string name="resultText" />
+    <string name="Enter_Bill_Total" />
+    <string name="enter_bill_total">Enter_Bill_Total</string>
+    <string name="calculate_tip">CALCULATE_TIP</string>
+    <string name="tip_amounts_will_display_here">Tip_Amounts_Will_Display_Here</string>
+</resources>
