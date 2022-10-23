@@ -4,50 +4,40 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.example.addnamesavedata.R
 import com.example.addnamesavedata.databinding.MainFragmentBinding
-
+import com.example.addnamesavedata.BR.myViewModel
 class MainFragment : Fragment() {
     companion object {
         fun newInstance() = MainFragment()
     }
 
     private lateinit var viewModel: MainViewModel
-    private var _binding: MainFragmentBinding? = null
-    private val binding get() = _binding!!
+    lateinit var _binding: MainFragmentBinding
+    //private val binding get() = _binding!!
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = MainFragmentBinding.inflate(inflater, container, false)
-        return binding.root
+        _binding = DataBindingUtil.inflate(
+            inflater, R.layout.main_fragment, container, false)
+
+        _binding.setLifecycleOwner(this)
+
+        return _binding.root
     }
 
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
-    }
-
+    @Deprecated("Deprecated in Java")
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        //super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProvider(this).get(MainViewModel::class.java)
-        // TODO: Use the ViewModel
-binding.displayNames.text =viewModel.getNameList()
-        //binding.textView.text = viewModel.getNameList()
-
-
-        binding.button.setOnClickListener {
-            if(binding.editTextName.text.isNotEmpty()) {
-                viewModel.setNameList(binding.editTextName.text.toString())
-                binding.displayNames.text = viewModel.getNameList()
-            } else {
-                binding.displayNames.text = "No Name display"
-            }
-        }
-
-
+        _binding.setVariable( myViewModel, viewModel )
     }
 
 }

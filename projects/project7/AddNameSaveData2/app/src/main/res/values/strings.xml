@@ -1,7 +1,0 @@
-<resources>
-    <string name="app_name">AddNameSaveData2</string>
-    <string name="string_inputtext">\@string/inputText</string>
-    <string name="myviewmodel_inputtext">\@={myViewModel.inputText}</string>
-    <string name="myviewmodel_outputtext">\@{myViewModel.outputText}</string>
-    <string name="string_button">\@string/button</string>
-</resources>

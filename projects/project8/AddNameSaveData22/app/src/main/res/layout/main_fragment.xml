@@ -7,7 +7,7 @@
     <data>
         <variable
             name="myViewModel"
-            type="com.example.addnamesavedata.ui.main.MainViewModel" />
+            type="com.example.addnamesavedata2.ui.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -16,45 +16,51 @@
         android:layout_height="match_parent"
         tools:context=".ui.main.MainFragment">
 
-        <TextView
-            android:id="@+id/resultText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text='@{myViewModel.nameList}'
-            app:layout_constraintBottom_toTopOf="@+id/addNameButton"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/nameInput" />
 
         <EditText
-            android:id="@+id/nameInput"
+            android:id="@+id/editTextName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
             android:ems="10"
             android:hint="@string/enter_name"
             android:importantForAutofill="no"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:minHeight="48dp"
-            android:text="@={myViewModel.nameInput}"
+            android:text="@={myViewModel.newName}"
             android:textColorHint="#757575"
-            app:layout_constraintBottom_toTopOf="@+id/resultText"
+            app:layout_constraintBottom_toTopOf="@+id/button"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/addNameButton"
+            android:id="@+id/button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="149dp"
+            android:layout_marginEnd="149dp"
             android:onClick="@{() -> myViewModel.addName()}"
             android:text="@string/add_name"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/displayNames"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/resultText" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextName" />
+
+        <TextView
+            android:id="@+id/displayNames"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:gravity="start|top"
+            android:text='@{myViewModel.names == "" ? "No names to display" : String.valueOf(myViewModel.names)}'
+            android:textAlignment="gravity"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/button"
+            app:layout_constraintVertical_bias="0.707" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>
