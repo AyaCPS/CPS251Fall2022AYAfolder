@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Navigation Project</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="title_goes_here">title_goes_here</string>
+    <string name="textview">TextView</string>
+    <string name="droid_picture">droid_picture</string>
+    <string name="button3">button3</string>
+    <string name="button2">button2</string>
+    <string name="button1">button1</string>
+    <string name="display_image_1">display_image_1</string>
+    <string name="display_image_2">display_image_2</string>
+    <string name="display_image_3">display_image_3</string>
+    <string name="drill_droid">drill_droid</string>
+    <string name="wifi_droid">wifi_droid</string>
+    <string name="wrench_droid">wrench_droid</string>
+    <string name="droid">droid</string>
+</resources>
