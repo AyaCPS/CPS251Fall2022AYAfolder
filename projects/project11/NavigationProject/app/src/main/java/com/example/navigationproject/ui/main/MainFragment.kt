@@ -1,9 +1,7 @@
 package com.example.navigationproject.ui.main
 
 
-import android.app.DirectAction
 import android.os.Bundle
-import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -56,7 +54,7 @@ class MainFragment : Fragment() {
 
 
         binding.button2.setOnClickListener {
-            val action:FragmentMainDirections.MainToSecond = MainFragmentDirections.mainToSecond()
+            val action:MainFragmentDirections.MainToSecond = MainFragmentDirections.mainToSecond()
 
             action.setMsgArg(binding.img2.contentDescription.toString())
             action.setImgArg(R.drawable.android_image_2)

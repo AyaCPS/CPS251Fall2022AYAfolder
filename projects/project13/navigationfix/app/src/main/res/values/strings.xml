@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">navigationfix</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="img2_btn">img2_btn</string>
+    <string name="img3_btn">img3_btn</string>
+    <string name="img1_btn">img1_btn</string>
+    <string name="img3_txt">img3_txt</string>
+    <string name="img2_txt">img2_txt</string>
+    <string name="img1_txt">img1_txt</string>
+    <string name="noimg_txt">noImg_txt</string>
+    <string name="noimg_txT">noImg_txt</string>
+    <string name="string_img1_txt">string/img1_txt</string>
+    <string name="output">output</string>
+    <string name="display_image1">display_image1</string>
+    <string name="title_image1">title_image1</string>
+    <string name="display_image2">display_image2</string>
+    <string name="display_image3">display_image3</string>
+    <string name="title_image3">title_image3</string>
+    <string name="title_image2">title_image2</string>
+</resources>

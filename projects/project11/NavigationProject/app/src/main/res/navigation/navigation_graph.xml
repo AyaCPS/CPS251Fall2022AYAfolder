@@ -15,12 +15,12 @@
 
         <action
             android:id="@+id/mainToSecond"
-            app:destination="@id/secondFragment" />
+            app:destination="@id/SecondFragment" />
 
     </fragment>
 
     <fragment
-        android:id="@+id/secondFragment"
+        android:id="@+id/SecondFragment"
         android:name="com.example.navigationproject.SecondFragment"
         android:label="fragment_second"
         tools:layout="@layout/fragment_second">
